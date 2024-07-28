@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator</title>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/validator@13.6.0/validator.min.js"
+    ></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="hidden">Splitter Tip Calculator App</h1>
+      <img class="logo" src="./images/logo.svg" alt="logo" />
+
+      <section class="tip">
+        <div class="tip__wrapper">
+          <div class="tip__bill">
+            <div class="tip__bill-text">
+              <label class="tip__bill-label" for="bill">Bill</label>
+              <p class="tip__bill--error" style="display: none">
+                Can't be zero
+              </p>
+            </div>
+            <input
+              class="tip__bill-input"
+              type="number"
+              name="bill"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="tip__selection">
+            <p class="tip__selection-label">Select Tip %</p>
+
+            <div class="tip__selection-item-wrapper">
+              <div class="tip__selection-item">
+                <p class="tip__selection-number">5%</p>
+              </div>
+
+              <div class="tip__selection-item">
+                <p class="tip__selection-number">10%</p>
+              </div>
+
+              <div class="tip__selection-item">
+                <p class="tip__selection-number">15%</p>
+              </div>
+
+              <div class="tip__selection-item">
+                <p class="tip__selection-number">25%</p>
+              </div>
+
+              <div class="tip__selection-item">
+                <p class="tip__selection-number">50%</p>
+              </div>
+
+              <input
+                class="tip__selection-custom"
+                type="number"
+                name="custom"
+                id="custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="tip__people">
+            <div class="tip__people-text">
+              <label class="tip__people-label" for="people"
+                >Number of People</label
+              >
+              <p class="tip__people--error" style="display: none">
+                Can't be zero
+              </p>
+            </div>
+            <input
+              class="tip__people-input"
+              type="number"
+              name="people"
+              placeholder="0"
+            />
+          </div>
+        </div>
+
+        <div class="tip__results">
+          <div class="tip__results-wrapper">
+            <div class="tip__results-amount">
+              <p class="tip__results-amount-text">
+                Tip Amount<span class="tip__results-amount-span">
+                  / person</span
+                >
+              </p>
+              <p class="tip__results-amount-number">$0.00</p>
+            </div>
+            <div class="tip__results-total">
+              <p class="tip__results-total-text">
+                Total<span class="tip__results-total-span"> / person</span>
+              </p>
+              <p class="tip__results-total-number">$0.00</p>
+            </div>
+          </div>
+          <button class="tip__results-button">Reset</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
